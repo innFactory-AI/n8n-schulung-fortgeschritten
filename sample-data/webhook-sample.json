@@ -1,0 +1,36 @@
+[{
+  "id": 1,
+  "first_name": "Wendeline",
+  "last_name": "Oldaker",
+  "email": "woldaker0@discovery.com",
+  "gender": "Female",
+  "ip_address": "201.129.8.214"
+}, {
+  "id": 2,
+  "first_name": "Kevyn",
+  "last_name": "Housden",
+  "email": "khousden1@jalbum.net",
+  "gender": "Genderqueer",
+  "ip_address": "70.247.237.28"
+}, {
+  "id": 3,
+  "first_name": "Lethia",
+  "last_name": "Shallcroff",
+  "email": "lshallcroff2@mit.edu",
+  "gender": "Female",
+  "ip_address": "255.124.165.224"
+}, {
+  "id": 4,
+  "first_name": "Homerus",
+  "last_name": "McAw",
+  "email": "hmcaw3@i2i.jp",
+  "gender": "Male",
+  "ip_address": "134.140.223.242"
+}, {
+  "id": 5,
+  "first_name": "Garfield",
+  "last_name": "Selvey",
+  "email": "gselvey4@disqus.com",
+  "gender": "Male",
+  "ip_address": "99.97.191.217"
+}]

@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "c525e863-ece9-4b32-ab7f-7ca7c89c7502",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://innfactoryai.agentic-web.eu/webhook/3f93ea33-cc2e-41b5-a42d-c8bd7ae024cc",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "[{\n  \"id\": 1,\n  \"first_name\": \"Wendeline\",\n  \"last_name\": \"Oldaker\",\n  \"email\": \"woldaker0@discovery.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"201.129.8.214\"\n}, {\n  \"id\": 2,\n  \"first_name\": \"Kevyn\",\n  \"last_name\": \"Housden\",\n  \"email\": \"khousden1@jalbum.net\",\n  \"gender\": \"Genderqueer\",\n  \"ip_address\": \"70.247.237.28\"\n}, {\n  \"id\": 3,\n  \"first_name\": \"Lethia\",\n  \"last_name\": \"Shallcroff\",\n  \"email\": \"lshallcroff2@mit.edu\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"255.124.165.224\"\n}, {\n  \"id\": 4,\n  \"first_name\": \"Homerus\",\n  \"last_name\": \"McAw\",\n  \"email\": \"hmcaw3@i2i.jp\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"134.140.223.242\"\n}, {\n  \"id\": 5,\n  \"first_name\": \"Garfield\",\n  \"last_name\": \"Selvey\",\n  \"email\": \"gselvey4@disqus.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"99.97.191.217\"\n}]",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "048cda81-c20a-4b57-9213-b4a8a5cd100e",
+      "name": "HTTP Request"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "c1c8469986f58ebd924f14ba9d906e06945522498f80983b80a6b52d2f49689f"
+  }
+}

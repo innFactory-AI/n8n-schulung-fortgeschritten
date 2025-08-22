@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Beispielformular",
+        "formDescription": "Hier steht eine Beschreibung wofür unser Formular genutzt wird",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Vorname",
+              "placeholder": "Michael",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Nachname",
+              "placeholder": "Böhrer",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Emailadresse",
+              "placeholder": "michael@test.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "von",
+              "fieldType": "date",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "bis",
+              "fieldType": "date"
+            },
+            {
+              "fieldLabel": "Termin",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Beratung"
+                  },
+                  {
+                    "option": "Angebot"
+                  },
+                  {
+                    "option": "Schulung"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1c84fc3c-4656-40a1-b829-26a87182137b",
+      "name": "On form submission",
+      "webhookId": "0552d70b-2351-44dc-976e-ca4c8092f365"
+    },
+    {
+      "parameters": {
+        "url": "https://witzapi.de/api/joke",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "1f0fb627-1f2e-4b24-98b0-31178d4acea1",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Vielen Dank!",
+        "completionMessage": "=Vielen Dank für Ihre Anfrage. Zwischen dem {{ new Date($('On form submission').item.json.von).toDateTime().toLocaleString() }} und {{ new Date($('On form submission').item.json.bis).toDateTime().toLocaleString() }} haben wir lieder keine Termine mehr für Sie, aber wenigstens ist hier ein Witz: {{ $json.text }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "885eed71-0394-46fe-9a5d-81a5b46def55",
+      "name": "Form",
+      "webhookId": "479e155c-10b3-48d2-ab5a-471d2a627c2b"
+    }
+  ],
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "c1c8469986f58ebd924f14ba9d906e06945522498f80983b80a6b52d2f49689f"
+  }
+}

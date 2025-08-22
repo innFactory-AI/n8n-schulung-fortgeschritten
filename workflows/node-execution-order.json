@@ -1,0 +1,227 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        48
+      ],
+      "id": "e6ca5b03-1c4c-4ec3-af4b-25424ff8c2f1",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -32,
+        -160
+      ],
+      "id": "d0cd7db5-3fe1-4ca3-808e-a02b3e967a12",
+      "name": "Wait",
+      "webhookId": "013263f2-17c6-485a-9b92-2d8463f8a9db"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -32,
+        144
+      ],
+      "id": "f26d7bd1-e69c-4ff9-86ac-b190e6757ceb",
+      "name": "Wait1",
+      "webhookId": "765638ba-b954-4f08-90b9-2bdd99625a14"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        -256
+      ],
+      "id": "8d283da8-c6ca-48d4-8f93-34552c1c033d",
+      "name": "Wait2",
+      "webhookId": "0b408c1b-3804-4e16-b8e5-617a0f1037c8"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        -64
+      ],
+      "id": "d0e26ab8-aa71-4675-a3c3-c3ac890746c0",
+      "name": "Wait3",
+      "webhookId": "dcd66213-32fb-40fc-aa98-fb9302d3ae53"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        480,
+        -256
+      ],
+      "id": "5784bbbb-46c5-49fe-9e31-8e1bd0715a25",
+      "name": "Wait4",
+      "webhookId": "95f39373-389f-4442-930b-f788782315c9"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        688,
+        -256
+      ],
+      "id": "cff67678-384b-4f7d-b50d-224d2bb62215",
+      "name": "Wait5",
+      "webhookId": "4bf9b7c0-313e-4c75-89ef-ad1eee9b794a"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        176,
+        144
+      ],
+      "id": "c91bc1ad-5b38-42ad-ae55-fc95337ea5c2",
+      "name": "Wait6",
+      "webhookId": "34ff9da6-e639-45a0-9350-7205c2dc15c6"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        304
+      ],
+      "id": "14ca6caa-2ad5-4bfb-b659-82715e1f4e4a",
+      "name": "Wait7",
+      "webhookId": "b4da198c-d3ba-44c5-921d-510c40b178e4"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        480,
+        -64
+      ],
+      "id": "352d93a2-a9ac-4c8e-a6ad-1feb132afc2b",
+      "name": "Wait8",
+      "webhookId": "849e0608-4ab0-472e-b505-641106a43fe6"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        528,
+        112
+      ],
+      "id": "1c17a59e-91b2-45fd-a9db-cf3aa3ccf21a",
+      "name": "Wait9",
+      "webhookId": "d0e10b5e-7cd0-4ee7-9b0c-4f6c13cb6bee"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Wait6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "Wait8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Wait5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "c1c8469986f58ebd924f14ba9d906e06945522498f80983b80a6b52d2f49689f"
+  }
+}

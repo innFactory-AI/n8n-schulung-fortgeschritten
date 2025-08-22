@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "amount",
+              "type": "number"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -272,
+        0
+      ],
+      "id": "1e1e636d-e92c-4762-9e06-0265180d2b8c",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "jsCode": "const users = [{\n  \"id\": 1,\n  \"first_name\": \"Liam\",\n  \"last_name\": \"Fossitt\",\n  \"email\": \"lfossitt0@bloglovin.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"228.114.38.163\"\n}, {\n  \"id\": 2,\n  \"first_name\": \"Byrle\",\n  \"last_name\": \"Borham\",\n  \"email\": \"bborham1@ocn.ne.jp\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"136.251.235.17\"\n}, {\n  \"id\": 3,\n  \"first_name\": \"Raff\",\n  \"last_name\": \"Titterell\",\n  \"email\": \"rtitterell2@paginegialle.it\",\n  \"gender\": \"Non-binary\",\n  \"ip_address\": \"82.53.179.77\"\n}, {\n  \"id\": 4,\n  \"first_name\": \"Thadeus\",\n  \"last_name\": \"Shearme\",\n  \"email\": \"tshearme3@arstechnica.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"177.221.89.141\"\n}, {\n  \"id\": 5,\n  \"first_name\": \"Dunc\",\n  \"last_name\": \"Hovie\",\n  \"email\": \"dhovie4@ustream.tv\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"220.253.156.61\"\n}, {\n  \"id\": 6,\n  \"first_name\": \"Garnet\",\n  \"last_name\": \"Bulle\",\n  \"email\": \"gbulle5@patch.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"104.81.113.22\"\n}, {\n  \"id\": 7,\n  \"first_name\": \"Ruprecht\",\n  \"last_name\": \"Simon\",\n  \"email\": \"rsimon6@rambler.ru\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"174.74.64.38\"\n}, {\n  \"id\": 8,\n  \"first_name\": \"Monro\",\n  \"last_name\": \"Horsell\",\n  \"email\": \"mhorsell7@illinois.edu\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"184.132.178.50\"\n}, {\n  \"id\": 9,\n  \"first_name\": \"Antonino\",\n  \"last_name\": \"Carnaman\",\n  \"email\": \"acarnaman8@homestead.com\",\n  \"gender\": \"Polygender\",\n  \"ip_address\": \"68.128.207.9\"\n}, {\n  \"id\": 10,\n  \"first_name\": \"Ferdinande\",\n  \"last_name\": \"Nickerson\",\n  \"email\": \"fnickerson9@ask.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"97.97.227.231\"\n}, {\n  \"id\": 11,\n  \"first_name\": \"Keven\",\n  \"last_name\": \"Dowsey\",\n  \"email\": \"kdowseya@altervista.org\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"187.158.164.178\"\n}, {\n  \"id\": 12,\n  \"first_name\": \"Bridgette\",\n  \"last_name\": \"Bulfit\",\n  \"email\": \"bbulfitb@cnn.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"225.93.224.14\"\n}, {\n  \"id\": 13,\n  \"first_name\": \"Anatola\",\n  \"last_name\": \"Mancktelow\",\n  \"email\": \"amancktelowc@geocities.jp\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"67.202.72.126\"\n}, {\n  \"id\": 14,\n  \"first_name\": \"Geoffry\",\n  \"last_name\": \"Greves\",\n  \"email\": \"ggrevesd@comsenz.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"81.187.194.36\"\n}, {\n  \"id\": 15,\n  \"first_name\": \"Ronny\",\n  \"last_name\": \"McDavitt\",\n  \"email\": \"rmcdavitte@cocolog-nifty.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"170.239.205.4\"\n}, {\n  \"id\": 16,\n  \"first_name\": \"Charis\",\n  \"last_name\": \"MacSkeagan\",\n  \"email\": \"cmacskeaganf@cpanel.net\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"118.237.228.33\"\n}, {\n  \"id\": 17,\n  \"first_name\": \"Hilarius\",\n  \"last_name\": \"Moseby\",\n  \"email\": \"hmosebyg@wsj.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"223.211.185.184\"\n}, {\n  \"id\": 18,\n  \"first_name\": \"Emmanuel\",\n  \"last_name\": \"MacAlpine\",\n  \"email\": \"emacalpineh@so-net.ne.jp\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"58.247.32.199\"\n}, {\n  \"id\": 19,\n  \"first_name\": \"Frasquito\",\n  \"last_name\": \"Ghidotti\",\n  \"email\": \"fghidottii@w3.org\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"21.82.67.194\"\n}, {\n  \"id\": 20,\n  \"first_name\": \"Dukie\",\n  \"last_name\": \"Durrant\",\n  \"email\": \"ddurrantj@instagram.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"146.250.113.141\"\n}, {\n  \"id\": 21,\n  \"first_name\": \"Laverna\",\n  \"last_name\": \"Ewings\",\n  \"email\": \"lewingsk@umich.edu\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"96.80.18.230\"\n}, {\n  \"id\": 22,\n  \"first_name\": \"Joletta\",\n  \"last_name\": \"Dyka\",\n  \"email\": \"jdykal@mashable.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"217.231.31.119\"\n}, {\n  \"id\": 23,\n  \"first_name\": \"Dominic\",\n  \"last_name\": \"Giannoni\",\n  \"email\": \"dgiannonim@wix.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"15.101.141.144\"\n}, {\n  \"id\": 24,\n  \"first_name\": \"Chucho\",\n  \"last_name\": \"Leaver\",\n  \"email\": \"cleavern@istockphoto.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"207.189.222.70\"\n}, {\n  \"id\": 25,\n  \"first_name\": \"Alistair\",\n  \"last_name\": \"Grass\",\n  \"email\": \"agrasso@vistaprint.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"140.228.232.255\"\n}, {\n  \"id\": 26,\n  \"first_name\": \"Etta\",\n  \"last_name\": \"Brandenberg\",\n  \"email\": \"ebrandenbergp@ycombinator.com\",\n  \"gender\": \"Genderqueer\",\n  \"ip_address\": \"91.104.58.94\"\n}, {\n  \"id\": 27,\n  \"first_name\": \"Charlotta\",\n  \"last_name\": \"Colebourne\",\n  \"email\": \"ccolebourneq@addthis.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"154.76.110.155\"\n}, {\n  \"id\": 28,\n  \"first_name\": \"Noel\",\n  \"last_name\": \"Fattore\",\n  \"email\": \"nfattorer@businessweek.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"221.86.14.159\"\n}, {\n  \"id\": 29,\n  \"first_name\": \"Lazarus\",\n  \"last_name\": \"Thurlby\",\n  \"email\": \"lthurlbys@jiathis.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"198.145.153.48\"\n}, {\n  \"id\": 30,\n  \"first_name\": \"Moira\",\n  \"last_name\": \"Maggorini\",\n  \"email\": \"mmaggorinit@weather.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"82.213.224.189\"\n}, {\n  \"id\": 31,\n  \"first_name\": \"Aurora\",\n  \"last_name\": \"Copestake\",\n  \"email\": \"acopestakeu@state.tx.us\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"153.86.92.60\"\n}, {\n  \"id\": 32,\n  \"first_name\": \"Babita\",\n  \"last_name\": \"Comoletti\",\n  \"email\": \"bcomolettiv@comsenz.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"65.213.219.51\"\n}, {\n  \"id\": 33,\n  \"first_name\": \"Eberto\",\n  \"last_name\": \"Songust\",\n  \"email\": \"esongustw@cocolog-nifty.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"110.13.161.197\"\n}, {\n  \"id\": 34,\n  \"first_name\": \"Inga\",\n  \"last_name\": \"Gooddie\",\n  \"email\": \"igooddiex@amazon.co.jp\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"23.50.114.28\"\n}, {\n  \"id\": 35,\n  \"first_name\": \"Oneida\",\n  \"last_name\": \"Orniz\",\n  \"email\": \"oornizy@yellowbook.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"199.201.126.107\"\n}, {\n  \"id\": 36,\n  \"first_name\": \"Dollie\",\n  \"last_name\": \"Brims\",\n  \"email\": \"dbrimsz@reddit.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"153.156.145.73\"\n}, {\n  \"id\": 37,\n  \"first_name\": \"Colleen\",\n  \"last_name\": \"Forsythe\",\n  \"email\": \"cforsythe10@edublogs.org\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"27.11.163.147\"\n}, {\n  \"id\": 38,\n  \"first_name\": \"Ermentrude\",\n  \"last_name\": \"Scarr\",\n  \"email\": \"escarr11@oaic.gov.au\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"23.138.50.133\"\n}, {\n  \"id\": 39,\n  \"first_name\": \"Nani\",\n  \"last_name\": \"MacCourt\",\n  \"email\": \"nmaccourt12@tiny.cc\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"252.3.8.147\"\n}, {\n  \"id\": 40,\n  \"first_name\": \"Gasper\",\n  \"last_name\": \"Morin\",\n  \"email\": \"gmorin13@icio.us\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"34.156.52.60\"\n}, {\n  \"id\": 41,\n  \"first_name\": \"Zaria\",\n  \"last_name\": \"Daggett\",\n  \"email\": \"zdaggett14@bloomberg.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"0.144.168.135\"\n}, {\n  \"id\": 42,\n  \"first_name\": \"Clive\",\n  \"last_name\": \"Cordes\",\n  \"email\": \"ccordes15@odnoklassniki.ru\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"33.134.207.61\"\n}, {\n  \"id\": 43,\n  \"first_name\": \"Carlyle\",\n  \"last_name\": \"Watmough\",\n  \"email\": \"cwatmough16@vinaora.com\",\n  \"gender\": \"Bigender\",\n  \"ip_address\": \"49.163.40.54\"\n}, {\n  \"id\": 44,\n  \"first_name\": \"Vachel\",\n  \"last_name\": \"Well\",\n  \"email\": \"vwell17@amazon.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"133.48.105.186\"\n}, {\n  \"id\": 45,\n  \"first_name\": \"Kylen\",\n  \"last_name\": \"Barensky\",\n  \"email\": \"kbarensky18@t.co\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"242.204.179.89\"\n}, {\n  \"id\": 46,\n  \"first_name\": \"Dyana\",\n  \"last_name\": \"Reidshaw\",\n  \"email\": \"dreidshaw19@prlog.org\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"5.81.78.62\"\n}, {\n  \"id\": 47,\n  \"first_name\": \"Raimondo\",\n  \"last_name\": \"Valiant\",\n  \"email\": \"rvaliant1a@discuz.net\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"234.59.169.154\"\n}, {\n  \"id\": 48,\n  \"first_name\": \"Matty\",\n  \"last_name\": \"Stanfield\",\n  \"email\": \"mstanfield1b@sun.com\",\n  \"gender\": \"Agender\",\n  \"ip_address\": \"228.195.27.182\"\n}, {\n  \"id\": 49,\n  \"first_name\": \"Danell\",\n  \"last_name\": \"Padgham\",\n  \"email\": \"dpadgham1c@fastcompany.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"115.8.254.101\"\n}, {\n  \"id\": 50,\n  \"first_name\": \"Chandal\",\n  \"last_name\": \"Belford\",\n  \"email\": \"cbelford1d@blog.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"186.10.108.56\"\n}, {\n  \"id\": 51,\n  \"first_name\": \"Samara\",\n  \"last_name\": \"O' Hern\",\n  \"email\": \"sohern1e@posterous.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"180.151.222.194\"\n}, {\n  \"id\": 52,\n  \"first_name\": \"Lenette\",\n  \"last_name\": \"Brickett\",\n  \"email\": \"lbrickett1f@theatlantic.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"56.40.136.134\"\n}, {\n  \"id\": 53,\n  \"first_name\": \"Kipp\",\n  \"last_name\": \"Norkutt\",\n  \"email\": \"knorkutt1g@smugmug.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"152.235.245.83\"\n}, {\n  \"id\": 54,\n  \"first_name\": \"Zak\",\n  \"last_name\": \"Laister\",\n  \"email\": \"zlaister1h@oaic.gov.au\",\n  \"gender\": \"Genderfluid\",\n  \"ip_address\": \"252.86.250.228\"\n}, {\n  \"id\": 55,\n  \"first_name\": \"Frederica\",\n  \"last_name\": \"Gopsill\",\n  \"email\": \"fgopsill1i@sakura.ne.jp\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"192.249.246.51\"\n}, {\n  \"id\": 56,\n  \"first_name\": \"Byran\",\n  \"last_name\": \"Maric\",\n  \"email\": \"bmaric1j@indiegogo.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"233.6.79.89\"\n}, {\n  \"id\": 57,\n  \"first_name\": \"Cordula\",\n  \"last_name\": \"Kedie\",\n  \"email\": \"ckedie1k@chicagotribune.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"87.219.120.230\"\n}, {\n  \"id\": 58,\n  \"first_name\": \"Lesley\",\n  \"last_name\": \"McLugaish\",\n  \"email\": \"lmclugaish1l@google.nl\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"71.112.47.133\"\n}, {\n  \"id\": 59,\n  \"first_name\": \"Jeth\",\n  \"last_name\": \"Bewly\",\n  \"email\": \"jbewly1m@umich.edu\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"15.37.187.7\"\n}, {\n  \"id\": 60,\n  \"first_name\": \"Odele\",\n  \"last_name\": \"Gillison\",\n  \"email\": \"ogillison1n@technorati.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"120.205.0.98\"\n}, {\n  \"id\": 61,\n  \"first_name\": \"Noe\",\n  \"last_name\": \"Ferraron\",\n  \"email\": \"nferraron1o@mail.ru\",\n  \"gender\": \"Genderfluid\",\n  \"ip_address\": \"205.64.189.129\"\n}, {\n  \"id\": 62,\n  \"first_name\": \"Kelvin\",\n  \"last_name\": \"Illidge\",\n  \"email\": \"killidge1p@gov.uk\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"184.82.34.86\"\n}, {\n  \"id\": 63,\n  \"first_name\": \"Reider\",\n  \"last_name\": \"Gaggen\",\n  \"email\": \"rgaggen1q@vkontakte.ru\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"91.128.16.137\"\n}, {\n  \"id\": 64,\n  \"first_name\": \"Cristina\",\n  \"last_name\": \"Capelle\",\n  \"email\": \"ccapelle1r@acquirethisname.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"194.17.90.58\"\n}, {\n  \"id\": 65,\n  \"first_name\": \"Jarred\",\n  \"last_name\": \"Vondrach\",\n  \"email\": \"jvondrach1s@economist.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"0.3.199.213\"\n}, {\n  \"id\": 66,\n  \"first_name\": \"Karlie\",\n  \"last_name\": \"Hanbury\",\n  \"email\": \"khanbury1t@gov.uk\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"8.255.72.246\"\n}, {\n  \"id\": 67,\n  \"first_name\": \"Shane\",\n  \"last_name\": \"Wilsone\",\n  \"email\": \"swilsone1u@webs.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"60.115.133.142\"\n}, {\n  \"id\": 68,\n  \"first_name\": \"Gilbert\",\n  \"last_name\": \"Orviss\",\n  \"email\": \"gorviss1v@utexas.edu\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"16.234.83.201\"\n}, {\n  \"id\": 69,\n  \"first_name\": \"Camey\",\n  \"last_name\": \"Fautley\",\n  \"email\": \"cfautley1w@comcast.net\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"38.217.153.159\"\n}, {\n  \"id\": 70,\n  \"first_name\": \"Helene\",\n  \"last_name\": \"McFarlane\",\n  \"email\": \"hmcfarlane1x@wikipedia.org\",\n  \"gender\": \"Genderfluid\",\n  \"ip_address\": \"193.99.16.211\"\n}, {\n  \"id\": 71,\n  \"first_name\": \"Arni\",\n  \"last_name\": \"Cleft\",\n  \"email\": \"acleft1y@qq.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"133.246.239.181\"\n}, {\n  \"id\": 72,\n  \"first_name\": \"Brockie\",\n  \"last_name\": \"Eschalotte\",\n  \"email\": \"beschalotte1z@amazon.de\",\n  \"gender\": \"Non-binary\",\n  \"ip_address\": \"79.68.169.57\"\n}, {\n  \"id\": 73,\n  \"first_name\": \"Lovell\",\n  \"last_name\": \"Gerriet\",\n  \"email\": \"lgerriet20@admin.ch\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"77.153.59.61\"\n}, {\n  \"id\": 74,\n  \"first_name\": \"Norrie\",\n  \"last_name\": \"McComas\",\n  \"email\": \"nmccomas21@jalbum.net\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"247.112.147.119\"\n}, {\n  \"id\": 75,\n  \"first_name\": \"Daryl\",\n  \"last_name\": \"Dudin\",\n  \"email\": \"ddudin22@wsj.com\",\n  \"gender\": \"Bigender\",\n  \"ip_address\": \"101.216.0.171\"\n}, {\n  \"id\": 76,\n  \"first_name\": \"Aluin\",\n  \"last_name\": \"Davis\",\n  \"email\": \"adavis23@odnoklassniki.ru\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"80.200.101.76\"\n}, {\n  \"id\": 77,\n  \"first_name\": \"Cesaro\",\n  \"last_name\": \"Popplewell\",\n  \"email\": \"cpopplewell24@timesonline.co.uk\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"185.99.34.191\"\n}, {\n  \"id\": 78,\n  \"first_name\": \"Wat\",\n  \"last_name\": \"Alforde\",\n  \"email\": \"walforde25@house.gov\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"147.133.178.228\"\n}, {\n  \"id\": 79,\n  \"first_name\": \"Skipp\",\n  \"last_name\": \"Rebeiro\",\n  \"email\": \"srebeiro26@istockphoto.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"75.160.8.28\"\n}, {\n  \"id\": 80,\n  \"first_name\": \"Audy\",\n  \"last_name\": \"Smylie\",\n  \"email\": \"asmylie27@nymag.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"231.56.243.194\"\n}, {\n  \"id\": 81,\n  \"first_name\": \"Lonee\",\n  \"last_name\": \"Adolf\",\n  \"email\": \"ladolf28@telegraph.co.uk\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"160.227.245.135\"\n}, {\n  \"id\": 82,\n  \"first_name\": \"Kellie\",\n  \"last_name\": \"Winteringham\",\n  \"email\": \"kwinteringham29@imdb.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"234.189.243.144\"\n}, {\n  \"id\": 83,\n  \"first_name\": \"Lazare\",\n  \"last_name\": \"Lowerson\",\n  \"email\": \"llowerson2a@furl.net\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"60.169.251.215\"\n}, {\n  \"id\": 84,\n  \"first_name\": \"Amata\",\n  \"last_name\": \"Roots\",\n  \"email\": \"aroots2b@privacy.gov.au\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"60.167.54.235\"\n}, {\n  \"id\": 85,\n  \"first_name\": \"Hillery\",\n  \"last_name\": \"Thying\",\n  \"email\": \"hthying2c@apache.org\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"156.226.185.99\"\n}, {\n  \"id\": 86,\n  \"first_name\": \"Clim\",\n  \"last_name\": \"Braine\",\n  \"email\": \"cbraine2d@spiegel.de\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"58.212.91.168\"\n}, {\n  \"id\": 87,\n  \"first_name\": \"De witt\",\n  \"last_name\": \"Godsafe\",\n  \"email\": \"dgodsafe2e@aol.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"13.164.124.33\"\n}, {\n  \"id\": 88,\n  \"first_name\": \"Aubree\",\n  \"last_name\": \"Fincke\",\n  \"email\": \"afincke2f@state.tx.us\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"106.3.20.129\"\n}, {\n  \"id\": 89,\n  \"first_name\": \"Daryl\",\n  \"last_name\": \"McIlveen\",\n  \"email\": \"dmcilveen2g@printfriendly.com\",\n  \"gender\": \"Genderfluid\",\n  \"ip_address\": \"7.20.79.184\"\n}, {\n  \"id\": 90,\n  \"first_name\": \"Hernando\",\n  \"last_name\": \"Flay\",\n  \"email\": \"hflay2h@joomla.org\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"250.163.42.31\"\n}, {\n  \"id\": 91,\n  \"first_name\": \"Ram\",\n  \"last_name\": \"Kaye\",\n  \"email\": \"rkaye2i@blogs.com\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"105.99.62.39\"\n}, {\n  \"id\": 92,\n  \"first_name\": \"Neala\",\n  \"last_name\": \"Rowlatt\",\n  \"email\": \"nrowlatt2j@taobao.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"140.215.131.209\"\n}, {\n  \"id\": 93,\n  \"first_name\": \"Daryn\",\n  \"last_name\": \"Lintott\",\n  \"email\": \"dlintott2k@youku.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"152.19.92.65\"\n}, {\n  \"id\": 94,\n  \"first_name\": \"Adair\",\n  \"last_name\": \"Butterworth\",\n  \"email\": \"abutterworth2l@toplist.cz\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"177.103.61.222\"\n}, {\n  \"id\": 95,\n  \"first_name\": \"Eyde\",\n  \"last_name\": \"Jannex\",\n  \"email\": \"ejannex2m@mayoclinic.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"47.44.36.11\"\n}, {\n  \"id\": 96,\n  \"first_name\": \"Ermentrude\",\n  \"last_name\": \"Plott\",\n  \"email\": \"eplott2n@foxnews.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"189.89.57.92\"\n}, {\n  \"id\": 97,\n  \"first_name\": \"Levon\",\n  \"last_name\": \"Westcarr\",\n  \"email\": \"lwestcarr2o@g.co\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"99.124.52.209\"\n}, {\n  \"id\": 98,\n  \"first_name\": \"Osborne\",\n  \"last_name\": \"Lodemann\",\n  \"email\": \"olodemann2p@themeforest.net\",\n  \"gender\": \"Male\",\n  \"ip_address\": \"104.71.211.73\"\n}, {\n  \"id\": 99,\n  \"first_name\": \"Anya\",\n  \"last_name\": \"Kittiman\",\n  \"email\": \"akittiman2q@fda.gov\",\n  \"gender\": \"Agender\",\n  \"ip_address\": \"245.44.163.154\"\n}, {\n  \"id\": 100,\n  \"first_name\": \"Lynna\",\n  \"last_name\": \"Logsdale\",\n  \"email\": \"llogsdale2r@sphinn.com\",\n  \"gender\": \"Female\",\n  \"ip_address\": \"241.140.179.115\"\n}]\n\nconst returnedUsers = []\n\nfor (let i = 0; i < $input.first().json.amount; i++) {\n  returnedUsers.push(users[i])\n}\n\nreturn {\n  users: returnedUsers\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        384,
+        -80
+      ],
+      "id": "0a775d1e-5a89-44d6-911a-d2cd2fb0ad41",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9a85dfb8-2b19-4b5f-884d-fee9375de69d",
+              "leftValue": "={{ $json.amount }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            },
+            {
+              "id": "9dded3aa-fb48-4fad-bc74-3c09e29a4e99",
+              "leftValue": "={{ $json.amount }}",
+              "rightValue": 100,
+              "operator": {
+                "type": "number",
+                "operation": "lte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -64,
+        0
+      ],
+      "id": "31d89c9c-694c-4ea8-a2c4-a574a359646e",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "errorMessage": "Input number is not betwee 0 and 100"
+      },
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        240,
+        48
+      ],
+      "id": "743814e1-2cf3-4c10-ba3b-61e61e27ac49",
+      "name": "Stop and Error"
+    }
+  ],
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        []
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "c1c8469986f58ebd924f14ba9d906e06945522498f80983b80a6b52d2f49689f"
+  }
+}

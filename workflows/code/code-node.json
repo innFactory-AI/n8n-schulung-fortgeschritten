@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "b7d3dd7a-43f5-4115-811b-aa260f4ef24e",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "812d6cb6-861f-4720-92a5-ebf5c1a23058",
+      "name": "Webhook",
+      "webhookId": "b7d3dd7a-43f5-4115-811b-aa260f4ef24e"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body\n\nconst IDs = [];\n\nfor (const user of body) {\n  console.log(user.id, user.first_name)\n  IDs.push(user.id)\n}\n\nreturn {\n  userIds: IDs\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "0733e7b8-7928-482b-be75-143ab6d70a29",
+      "name": "Code"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "c1c8469986f58ebd924f14ba9d906e06945522498f80983b80a6b52d2f49689f"
+  }
+}
